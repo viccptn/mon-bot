@@ -1,68 +1,203 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Inviter mon bot Discord</title>
+  <meta charset="UTF-8">
+  <title>vicc – Modération & Jeux</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            background: #0f172a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: Arial, sans-serif;
-            color: white;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-        .card {
-            background: #1e293b;
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 0 20px rgba(0,0,0,0.4);
-            width: 320px;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0f172a;
+      color: white;
+    }
 
-        .card h1 {
-            margin-bottom: 10px;
-        }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #111827;
+    }
 
-        .card p {
-            opacity: 0.9;
-        }
+    header img {
+      height: 40px;
+    }
 
-        a.invite-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 14px 24px;
-            background: #5865F2;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 16px;
-            transition: background 0.2s;
-        }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 18px;
+    }
 
-        a.invite-btn:hover {
-            background: #4752c4;
-        }
-    </style>
+    .nav-btn {
+      background: #5865F2;
+      padding: 10px 18px;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      opacity: 0.8;
+      margin-bottom: 30px;
+    }
+
+    .primary-btn {
+      background: #5865F2;
+      padding: 14px 26px;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 40px auto 0;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .legal {
+      background: #111827;
+      padding: 80px 20px;
+    }
+
+    .legal-content {
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .legal-content h3 {
+      margin-top: 40px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #0b1120;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>🤖 Mon Bot Discord</h1>
-        <p>Invite le bot sur ton serveur en un clic</p>
+<header>
+  <div class="nav-left">
+    <img src="assets/logo.png" alt="Logo du bot">
+    <span>vicc</span>
+  </div>
 
-        <a class="invite-btn"
-           href="https://discord.com/oauth2/authorize?client_id=1468147940605431810&permissions=8&integration_type=0&scope=bot+applications.commands"
-           target="_blank">
-            ➕ Inviter le bot
-        </a>
+  <a class="nav-btn" target="_blank"
+     href="https://discord.com/oauth2/authorize?client_id=1468147940605431810&permissions=8&integration_type=0&scope=bot+applications.commands">
+    Ajouter à Discord
+  </a>
+</header>
+
+<section class="hero">
+  <h1>Le bot Discord tout-en-un<br>pour gérer et animer ton serveur</h1>
+  <p>
+    Modération avancée, jeux intégrés et commandes slash modernes.<br>
+    Pensé pour les serveurs sérieux.
+  </p>
+
+  <a class="primary-btn" target="_blank"
+     href="https://discord.com/oauth2/authorize?client_id=1468147940605431810&permissions=8&integration_type=0&scope=bot+applications.commands">
+    ➕ Ajouter le bot
+  </a>
+</section>
+
+<section class="section">
+  <h2>Pourquoi choisir ce bot ?</h2>
+
+  <div class="features-grid">
+    <div class="card">
+      <h3>🛡️ Modération complète</h3>
+      <p>Ban, kick, mute, logs et autorole.</p>
     </div>
+
+    <div class="card">
+      <h3>🎮 Jeux intégrés</h3>
+      <p>Chifumi, morpion, pendu, puissance 4.</p>
+    </div>
+
+    <div class="card">
+      <h3>⚙️ Outils avancés</h3>
+      <p>Rank, dashboard et outils serveur.</p>
+    </div>
+
+    <div class="card">
+      <h3>🚀 Slash commands</h3>
+      <p>Rapides, modernes et natives Discord.</p>
+    </div>
+  </div>
+</section>
+
+<section class="legal">
+  <div class="legal-content">
+    <h2>Informations légales</h2>
+
+    <h3 id="terms">📜 Terms of Service</h3>
+    <p>
+      By using this Discord bot, you agree that the service is provided "as is"
+      without warranty. The developer is not responsible for misuse.
+      Abuse or malicious usage may result in blacklisting.
+      The developer reserves the right to modify or discontinue the service at any time.
+    </p>
+
+    <h3 id="privacy">🔒 Privacy Policy</h3>
+    <p>This bot may collect and store the following data strictly for functionality:</p>
+    <ul>
+      <li>User IDs</li>
+      <li>Server IDs</li>
+      <li>Channel IDs</li>
+      <li>Moderation and game-related data</li>
+    </ul>
+
+    <p>
+      No data is sold or shared with third parties.
+      Users may request data deletion by contacting:
+      <strong>contact@tonemail.com</strong>
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2026 – vicc Bot
+</footer>
 
 </body>
 </html>
